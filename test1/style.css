@@ -1,0 +1,91 @@
+.ukraine > :first-child {
+    background-color: rgb(1, 91, 187);
+    height: 50%;
+    width: 100%;
+}
+.ukraine > :last-child {
+    background-color: rgb(254, 213, 0);
+    height: 50%;
+    width: 100%;
+}
+.japan {
+    background-color: rgb(255, 255, 255);
+}
+.japan div {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(187, 0, 45);
+}
+.chech :first-child {
+    background-color: rgb(255, 255, 255);
+    height: 50%;
+}
+.chech :nth-child(2) {
+    background-color: rgb(215, 20, 26);
+    height: 50%;
+}
+.chech :last-child {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 90px solid transparent;
+    border-left: 150px solid rgb(17, 69, 126);
+    border-bottom: 90px solid transparent;
+}
+.island {
+    background-color: rgb(219, 30, 52);
+}
+.island :nth-child(1) {
+    position: absolute;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(3, 83, 156);
+    border-right: 10px solid rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(255, 255, 255);
+}
+.island :nth-child(2) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 190px;
+    height: 70px;
+    background-color: rgb(3, 83, 156);
+    border-left: 10px solid rgb(255, 255, 255);
+    border-bottom: 10px solid rgb(255, 255, 255);
+}
+.island :nth-child(3) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(3, 83, 156);
+    border-right: 10px solid rgb(255, 255, 255);
+    border-top: 10px solid rgb(255, 255, 255);
+}
+.island :nth-child(4) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 190px;
+    height:70px;
+    background-color: rgb(3, 83, 156);
+    border-left: 10px solid rgb(255, 255, 255);
+    border-top: 10px solid rgb(255, 255, 255);
+
+}
+
+.ukraine, .japan, .chech, .island {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    margin: 20px;
+    border: 1px solid black;
+}

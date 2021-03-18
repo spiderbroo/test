@@ -1,0 +1,50 @@
+body {
+    padding: 20px;
+    padding-top: 0;
+}
+#countryTitle {
+    font-size: 19px;
+    font-weight: bold;
+    color: rgb(184, 50, 2);
+}
+.UniString {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.UniString div {
+    display: inline;
+}
+.UniString div:first-of-type {
+    color: rgb(187, 3, 3);
+}
+.UniString div:last-of-type {
+    color: rgb(17, 134, 2);
+}
+.UniString input {
+    width: 15px;
+    height: 15px;
+    margin-left: 20px;
+}
+#checkedUni {
+    position: fixed;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    right: 20px;
+    background-color: rgba(0, 185, 40, 0.568);
+}
+#container .UniString:last-of-type hr {
+    display: none;
+}
+input {
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 0;
+}
+textarea {
+    font-size: 16px;
+    padding: 10px;
+}
+body p:first-of-type {
+    font-size: 20px;
+}
