@@ -1,15 +1,23 @@
 body {
     padding: 20px;
     padding-top: 0;
+    background-color: rgb(255, 157, 112);
 }
 #countryTitle {
-    font-size: 19px;
+    margin-top: 20px;
+    font-size: 25px;
     font-weight: bold;
-    color: rgb(184, 50, 2);
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
 }
 .UniString {
     font-size: 18px;
     margin-bottom: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.UniString:first-of-type {
+    padding-top: 50px;
 }
 .UniString div {
     display: inline;
@@ -18,7 +26,7 @@ body {
     color: rgb(187, 3, 3);
 }
 .UniString div:last-of-type {
-    color: rgb(17, 134, 2);
+    color: rgb(129, 0, 108);
 }
 .UniString input {
     width: 15px;
@@ -28,13 +36,19 @@ body {
 #checkedUni {
     position: fixed;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid rgb(212, 212, 212);
     border-radius: 50%;
     right: 20px;
-    background-color: rgba(0, 185, 40, 0.568);
+    background-color: rgba(255, 255, 255, 0.568);
 }
 #container .UniString:last-of-type hr {
     display: none;
+}
+#container {
+    margin: 0px;
+    background-color: white;
+    min-width: 900px;
+    border-radius: 20px;
 }
 input {
     font-size: 20px;
@@ -46,5 +60,41 @@ textarea {
     padding: 10px;
 }
 body p:first-of-type {
-    font-size: 20px;
+    font-size: 30px;
+    color: rgb(102, 102, 102);
+    text-decoration: wavy ;
+    padding: 20px;
+    background-color: white;
+    width: 320px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px 0px rgb(131, 131, 131);
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px 0px rgb(131, 131, 131);
+}
+input {
+    position: relative;
+    width: 120px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    color: rgb(49, 49, 49);
+    box-shadow: 0px 5px 0px 0px rgb(131, 131, 131);
+}
+input:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 5px 0px 0px rgb(185, 185, 185);
+}
+input:active {
+    top: 4px;
+    box-shadow: 0px 1px 0px 0px rgb(185, 185, 185);
 }

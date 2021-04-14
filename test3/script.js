@@ -32,7 +32,7 @@ function searchUniversities() {
     const xhr = new XMLHttpRequest()
     xhr.open('GET', requestURL)
     container.innerHTML = "";
-    console.log( localStorage.getItem('countryValuess'))
+    // console.log( localStorage.getItem('countryValuess'))
     xhr.onload = () => {
         countryTitle.innerHTML = `Университеты в ${country.value}:`
         let result = JSON.parse(xhr.response);
@@ -48,7 +48,9 @@ function searchUniversities() {
             <strong>domains:</strong> ${result[i]['domains']}, <strong>name:</strong> <div>${result[i]['name']}</div>,
             <strong>web-site:</strong> <a href="${result[i]['web_pages']}">${result[i]['web_pages']}</a><input class="select" type="checkbox"><hr>`;
             container.appendChild(eachResult);
+            
         }
+        // localStorage.setItem('tableWithUni', JSON.stringify(.container.eachResult))
         let checkboxesLen = document.querySelectorAll('.select');
         for (let i=0; i<checkboxesLen.length; i++) {
             checkboxesLen[i].addEventListener('click', checkboxesLength, false);
