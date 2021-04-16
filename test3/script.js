@@ -30,10 +30,12 @@ function searchUniversities() {
     }
     let requestURL = `http://universities.hipolabs.com/search?country=${country.value}`
     const xhr = new XMLHttpRequest()
-    xhr.open('GET', requestURL)
+    xhr.open('GET', requestURL, true)
     container.innerHTML = "";
     // console.log( localStorage.getItem('countryValuess'))
     xhr.onload = () => {
+        xhr.withCredentials = true;
+        xhr.onreadystatechange = handler;
         countryTitle.innerHTML = `Университеты в ${country.value}:`
         let result = JSON.parse(xhr.response);
         if (result.length == 0) {
