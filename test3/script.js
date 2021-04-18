@@ -21,26 +21,35 @@ let checkedUni = document.getElementById('checkedUni')
 
 
 let country = document.getElementById('searchUni');
-let countryValues = country.value;
+
+// let countryValues = country.value;
 sendBtn.addEventListener('click', searchUniversities, false) 
 function searchUniversities() {
     if (country.value == "") {
         alert("Введите название страны");
         return
     }
-    let requestURL = `http://universities.hipolabs.com/search?country=${country.value}`
-    const xhr = new XMLHttpRequest()
-    xhr.open('GET', requestURL, true)
+    let search = country.value;
+    search = search.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));
+    let requestURL = "search.json";
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestURL, true);
     container.innerHTML = "";
     // console.log( localStorage.getItem('countryValuess'))
     xhr.onload = () => {
-        xhr.withCredentials = true;
-        xhr.onreadystatechange = handler;
         countryTitle.innerHTML = `Университеты в ${country.value}:`
-        let result = JSON.parse(xhr.response);
+        let result = [];
+        let parsedResult = JSON.parse(xhr.response);
+        for (let i = 0; i < parsedResult.length; i++) {
+            if(parsedResult[i]['country'] !== search) {
+                continue;
+            } else {
+            result.push(parsedResult[i]);
+            }
+        }
         if (result.length == 0) {
         countryTitle.innerHTML = "Похоже в названии ошибка!"
-        return
+        return;
         }
         // setLocalSrtingToLocalStorage();
             for (let i=0; i < result.length; i++){
@@ -63,8 +72,7 @@ function searchUniversities() {
         }
         // console.log( localStorage.getItem('countryValuess'))
     }
-    xhr.send()
-    
+    xhr.send();
 }
 
 clearFormBtn.addEventListener('click', clearAll, false);
